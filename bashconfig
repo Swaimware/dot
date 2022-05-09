@@ -1,0 +1,24 @@
+# Aliases
+
+unalias -a
+alias ll="ls -la"
+alias ls="ls -h --color=auto"
+alias top="htop"
+alias ?="duck"
+alias ??="google"
+
+set -o noclobber
+shopt -s checkwinsize
+shopt -s expand_aliases
+shopt -s globstar
+shopt -s dotglob
+shopt -s extglob
+
+export HISTCONTROL=ignoreboth
+export HISTSIZE=5000
+export HISTFILESIZE=10000
+
+set -o vi
+shopt -s histappend
+
+export PATH=$HOME/Repos/gitlab.com/swaimware/dot/scripts:$PATH
